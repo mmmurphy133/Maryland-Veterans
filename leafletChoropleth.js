@@ -1,13 +1,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 // initialize the map
 var coords = [39, -76.6]; // map center point
-var zoom = 20; // map zoom level lower number is out higher number is in
+var zoom = 30; // map zoom level lower number is out higher number is in
 var map = L.map('map').setView(coords, zoom); // put it all together
 
 ////////////////////////////////////////////////////////////////////////////////
 // load a basemap tile layer
 L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
-  maxZoom: 18,
+  maxZoom: 100,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Data by <a href="https://github.com/mmmurphy133">Meghan Murphy</a>'
 }).addTo(map);
 
@@ -93,7 +93,7 @@ geojson = L.geoJson(statesData, {
 
 ////////////////////////////////////////////////////////////////////////////////
 // customize map attribution in lower left corner
-map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+//map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
 ////////////////////////////////////////////////////////////////////////////////
 // add legend layer to map at the given position
