@@ -64,7 +64,7 @@ function highlightFeature(e) {
     layer.bringToFront();
   }
 
-  info.update(layer.feature.attributes);
+  info.update(layer.features.attributes);
 }
 
 var geojson;
@@ -104,7 +104,7 @@ var legend = L.control({
 legend.onAdd = function(map) {
 
   var div = L.DomUtil.create('div', 'info legend'),
-    grades = [0, 10, 20, 50, 100, 200, 500, 1000],
+    grades = [0, 1000, 5500, 13000, 33000, 60000],
     labels = [],
     from, to;
 
