@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 // initialize the map
-var coords = [37.8, -96]; // map center point
+var coords = [39, -76.6]; // map center point
 var zoom = 5; // map zoom level lower number is out higher number is in
 var map = L.map('map').setView(coords, zoom); // put it all together
 
@@ -22,9 +22,9 @@ info.onAdd = function(map) {
 };
 
 info.update = function(props) {
-  this._div.innerHTML = '<h4>US Population Density</h4>' + (props ?
-    '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>' :
-    'Hover over a state');
+  this._div.innerHTML = '<h4>Number of Veterans</h4>' + (props ?
+    '<b>' + props.NAME + '</b><br />' + props.Vets + ' soldiers / mi<sup>2</sup>' :
+    'Hover over a county');
 };
 
 info.addTo(map);
@@ -49,7 +49,7 @@ function style(feature) {
     color: 'white',
     dashArray: '3',
     fillOpacity: 0.7,
-    fillColor: getColor(feature.properties.density)
+    fillColor: getColor(feature.attributes.Vets)
   };
 }
 // highlightFeature function
@@ -67,7 +67,7 @@ function highlightFeature(e) {
     layer.bringToFront();
   }
 
-  info.update(layer.feature.properties);
+  info.update(layer.feature.attributes);
 }
 
 var geojson;
