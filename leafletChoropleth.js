@@ -110,7 +110,7 @@ legend.onAdd = function(map) {
 
   var div = L.DomUtil.create('div', 'info legend'),
     grades = [0, 5500, 13000, 33000],
-    labels = [],
+    labels = ['<h4>Retired Soldiers</h4>'],
     from, to;
 
   for (var i = 0; i < grades.length; i++) {
@@ -126,8 +126,5 @@ legend.onAdd = function(map) {
   return div;
 };
   
-legend.update = function(map){
-  this.div.innerHTML = '<h4>Number of Veterans</h4>'
-};
 // add legend to map
 legend.addTo(map);
