@@ -22,7 +22,7 @@ info.onAdd = function(map) {
 };
 
 info.update = function(props) {
-  this._div.innerHTML = '<h4>Number of Veterans</h4>' + (props ?
+  this._div.innerHTML = '<h4>Number of Veterans</h4>' + '</b><br />' + '<h4>Per County</h4>' + (props ?
     '<b>' + props.county + '</b><br />' + props.vets + ' soldiers' :
     'Hover over a county');
 };
