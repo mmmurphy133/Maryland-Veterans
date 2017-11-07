@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // initialize the map
 var coords = [39, -76.6]; // map center point
-var zoom = 5; // map zoom level lower number is out higher number is in
+var zoom = 10; // map zoom level lower number is out higher number is in
 var map = L.map('map').setView(coords, zoom); // put it all together
 
 ////////////////////////////////////////////////////////////////////////////////
