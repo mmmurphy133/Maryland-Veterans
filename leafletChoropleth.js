@@ -93,7 +93,7 @@ geojson = L.geoJson(statesData, {
 
 ////////////////////////////////////////////////////////////////////////////////
 // customize map attribution in lower left corner
-//map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
 ////////////////////////////////////////////////////////////////////////////////
 // add legend layer to map at the given position
