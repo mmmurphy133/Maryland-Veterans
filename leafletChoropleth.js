@@ -125,5 +125,9 @@ legend.onAdd = function(map) {
   div.innerHTML = labels.join('<br>');
   return div;
 };
+  
+legend.update = function(map){
+  this.div.innerHTML = '<h4>Number of Veterans</h4>'
+};
 // add legend to map
 legend.addTo(map);
