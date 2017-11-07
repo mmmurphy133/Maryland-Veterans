@@ -67,10 +67,10 @@ function highlightFeature(e) {
 }
 
 // temporary map.getCenter() function
-map.on('moveend', function(e) {
-   var bounds = map.getCenter();
-   console.log(bounds);
-});
+//map.on('moveend', function(e) {
+//   var bounds = map.getCenter();
+//   console.log(bounds);
+//});
 
 var geojson;
 // reset previously highlighted feature function
